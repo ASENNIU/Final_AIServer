@@ -4,6 +4,8 @@ http2.0
 
 # gRPC的下载和编译
 
+## 方案一
+
 https://pj-x86.github.io/2020/grpc%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/
 
 大体上根据这篇博客来的
@@ -96,3 +98,22 @@ https://pj-x86.github.io/2020/grpc%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%8A%A0%
   ```
 
 - 这一步仍然会报很多错误，如果是下载的错误可以修改.gitmoduls的url信息，从码云上下载。另外，可以进入到某一个第三方库中，根据它的的依赖去下载。这时候要看一下，如果是已经下载过得第三方库可以直接复制过去。
+
+## 方案二
+
+科学上网
+
+- 使用方案一仍然会遇到很多问题
+
+```shell
+fatal: unable to access 'https://github.com/xxx/autowrite.git/': 
+OpenSSL SSL_read: Connection was reset, errno 10054
+# 或者
+fatal: unable to access 'https://github.com/xxx/autowrite.git/':
+Failed to connect to github.com port 443: Timed out
+
+```
+
+- 究极方案，科学上网，使用全局代理模型
+- 取消ssl验证：git config --global http.sslVerify false，这一步仿佛没有什么卵用
+- git submodule update --init --recursive 递归的下载完所有第三方库，根据报错提示以及手动检查，把没有下载的再手动git clone一下
