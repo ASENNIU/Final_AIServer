@@ -30,11 +30,11 @@ int main(int argc, const char* argv[])
 
     std::vector<float> value{0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33};
     auto opts = torch::TensorOptions().dtype(torch::kFloat32);
-    auto input_tensor = torch::from_blob(value.data(), {int64_t(value.size())}, opts);
+    auto input_tensor = torch::from_blob(value.data(), {int64_t(value.size())}, opts).reshape({1, 10});
 
-    inputs.push_back(input_tensor.reshape({1, 10}));
+    //inputs.push_back(input_tensor.reshape({1, 10}));
 
-    at::Tensor output = module.forward(inputs).toTensor();
+    at::Tensor output = module.forward({input_tensor}).toTensor();
     std::cout << output << '\n';
 
     std::vector<float> v(output.data_ptr<float>(), output.data_ptr<float>() + output.numel());
