@@ -21,10 +21,10 @@ cmake_minimum_required(VERSION 3.8)
 
 project(Final_AISever C CXX)
 
-include(cmake/common.cmake)
+include(cmake/common.cmake model/model.hpp)
 
-#list(APPEND CMAKE_PREFIX_PATH "/home/leon/.local/libtorch_cpu/libtorch")
-#find_package(Torch REQUIRED)
+list(APPEND CMAKE_PREFIX_PATH "/home/leon/.local/libtorch_cpu/libtorch")
+find_package(Torch REQUIRED)
 
 # Proto file
 get_filename_component(rs_proto "rs_protos/rs.proto" ABSOLUTE)
@@ -50,7 +50,7 @@ add_custom_command(
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 # Include model
-add_subdirectory("${PROJECT_SOURCE_DIR}/model")
+#add_subdirectory("${PROJECT_SOURCE_DIR}/model")
 
 # target_link_libraries(${PROJECT_NAME} PUBLIC model)
 
@@ -88,5 +88,5 @@ target_link_libraries(${PROJECT_NAME}
         ${_REFLECTION}
         ${_GRPC_GRPCPP}
         ${_PROTOBUF_LIBPROTOBUF}
-        model
+        ${TORCH_LIBRARIES}
         )
