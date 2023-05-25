@@ -10,7 +10,7 @@
 #define UTILS_H
 namespace rs{
     template<typename T>
-    vector<T>& convert_string_to_vector(const std::string& str, const std::string& delim) {
+    vector<T> convert_string_to_vector(const std::string& str, const std::string& delim) {
         /***
           将向量的字符串形式转为vector，向量的形式为 0.33,0,33
           */

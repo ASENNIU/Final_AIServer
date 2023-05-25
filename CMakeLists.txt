@@ -21,10 +21,13 @@ cmake_minimum_required(VERSION 3.8)
 
 project(Final_AISever C CXX)
 
-include(../cmake/common.cmake)
+include(cmake/common.cmake)
+
+#list(APPEND CMAKE_PREFIX_PATH "/home/leon/.local/libtorch_cpu/libtorch")
+#find_package(Torch REQUIRED)
 
 # Proto file
-get_filename_component(rs_proto "../rs_protos/rs.proto" ABSOLUTE)
+get_filename_component(rs_proto "rs_protos/rs.proto" ABSOLUTE)
 get_filename_component(rs_proto_path "${rs_proto}" PATH)
 
 # Generated sources
@@ -42,8 +45,14 @@ add_custom_command(
         "${rs_proto}"
       DEPENDS "${rs_proto}")
 
+
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
+
+# Include model
+add_subdirectory("${PROJECT_SOURCE_DIR}/model")
+
+# target_link_libraries(${PROJECT_NAME} PUBLIC model)
 
 # rs_grpc_proto
 add_library(rs_grpc_proto
@@ -56,15 +65,28 @@ target_link_libraries(rs_grpc_proto
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
+
+
 # Targets RSer_[async_](client|server)
-foreach(_target
-  rser_server)
-  add_executable(${_target} "${_target}.cc")
-  target_link_libraries(${_target}
-    rs_grpc_proto
-    absl::flags
-    absl::flags_parse
-    ${_REFLECTION}
-    ${_GRPC_GRPCPP}
-    ${_PROTOBUF_LIBPROTOBUF})
-endforeach()
+#foreach(_target
+#  rser_server)
+#  add_executable(${_target} "${_target}.cc")
+#  target_link_libraries(${_target}
+#    rs_grpc_proto
+#    absl::flags
+#    absl::flags_parse
+#    ${_REFLECTION}
+#    ${_GRPC_GRPCPP}
+#    ${_PROTOBUF_LIBPROTOBUF})
+#endforeach()
+
+add_executable(${PROJECT_NAME} rser_server.cc)
+target_link_libraries(${PROJECT_NAME}
+        rs_grpc_proto
+        absl::flags
+        absl::flags_parse
+        ${_REFLECTION}
+        ${_GRPC_GRPCPP}
+        ${_PROTOBUF_LIBPROTOBUF}
+        model
+        )

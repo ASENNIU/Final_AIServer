@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e106aca-ea69-4e2c-aab2-462fa67eae7f" name="Changes" comment="编写工具类和函数，线程池以及向量字符串转vector">
+      <change afterPath="$PROJECT_DIR$/model/model_demo.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RS_Server/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RS_Server/rser_server.cc" beforeDir="false" afterPath="$PROJECT_DIR$/rser_server.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_demo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.hpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Pgc7SUahOPNrnf8tozLlF7mOZF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "E:/Workspace/Final_AIServer/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Workspace\Final_AIServer\utils" />
+      <recent name="E:\Workspace\Final_AIServer\model" />
+      <recent name="E:\Workspace\Final_AIServer\RS_Server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Workspace\Final_AIServer" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e106aca-ea69-4e2c-aab2-462fa67eae7f" name="Changes" comment="" />
+      <created>1683881997616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683881997616</updated>
+      <workItem from="1683881999512" duration="3345000" />
+      <workItem from="1684157006194" duration="96000" />
+      <workItem from="1684395304859" duration="409000" />
+      <workItem from="1684740124580" duration="22225000" />
+      <workItem from="1684933941062" duration="21629000" />
+    </task>
+    <task id="LOCAL-00001" summary="init project">
+      <created>1683882117054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683882117054</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加用户态和内核态笔记">
+      <created>1684157060292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684157060292</updated>
+    </task>
+    <task id="LOCAL-00003" summary="编写RS模块的proto和cc文件，实现本地的java与C++的调用">
+      <created>1684764655801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684764655801</updated>
+    </task>
+    <task id="LOCAL-00004" summary="编写算法demo，使用LibTorch_CPU做模型的部署">
+      <created>1684852642440</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684852642440</updated>
+    </task>
+    <task id="LOCAL-00005" summary="编写工具类和函数，线程池以及向量字符串转vector">
+      <created>1684936335165</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684936335165</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init project" />
+    <MESSAGE value="增加用户态和内核态笔记" />
+    <MESSAGE value="编写RS模块的proto和cc文件，实现本地的java与C++的调用" />
+    <MESSAGE value="编写算法demo，使用LibTorch_CPU做模型的部署" />
+    <MESSAGE value="编写工具类和函数，线程池以及向量字符串转vector" />
+    <option name="LAST_COMMIT_MESSAGE" value="编写工具类和函数，线程池以及向量字符串转vector" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

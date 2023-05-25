@@ -23,6 +23,11 @@
 #include <memory>
 #include <string>
 #include <thread>
+#include <torch/script.h>
+#include <iostream>
+#include <memory>
+#include <vector>
+#include <ATen/ATen.h>
 
 #include "absl/flags/flag.h"
 #include "absl/flags/parse.h"
@@ -30,6 +35,8 @@
 
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
+
+#include "model/model.hpp"
 
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
@@ -176,6 +183,8 @@ int main(int argc, char** argv) {
     absl::ParseCommandLine(argc, argv);
     ServerImpl server;
     server.Run(absl::GetFlag(FLAGS_port));
-
+    long int arr[2] = {1, 10};
+    c10::IntArrayRef ref(arr, 2);
+    rs::RS_Model _model(argv[1], ref);
     return 0;
 }
