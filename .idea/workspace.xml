@@ -12,7 +12,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e106aca-ea69-4e2c-aab2-462fa67eae7f" name="Changes" comment="将工具函数，模型类进行抽象，以及整合线程池，完成C++部分的开发" />
+    <list default="true" id="5e106aca-ea69-4e2c-aab2-462fa67eae7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_demo.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test.exe" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +29,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f41725f9-215a-476b-9010-0887363e1afd" />
+        <option name="url" value="git@github.com:ASENNIU/Final_AIServer.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,7 +66,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CPPToolchains",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -117,11 +136,29 @@
       <option name="project" value="LOCAL" />
       <updated>1685026328011</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="合并冲突，删除.idea文件">
+      <created>1685108641463</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685108641463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
@@ -130,7 +167,8 @@
     <MESSAGE value="编写算法demo，使用LibTorch_CPU做模型的部署" />
     <MESSAGE value="编写工具类和函数，线程池以及向量字符串转vector" />
     <MESSAGE value="封装模型以及联合编译" />
-    <option name="LAST_COMMIT_MESSAGE" value="封装模型以及联合编译" />
+    <MESSAGE value="合并冲突，删除.idea文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并冲突，删除.idea文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

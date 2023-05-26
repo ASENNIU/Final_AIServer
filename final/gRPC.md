@@ -117,3 +117,6 @@ Failed to connect to github.com port 443: Timed out
 - 究极方案，科学上网，使用全局代理模型
 - 取消ssl验证：git config --global http.sslVerify false，这一步仿佛没有什么卵用
 - git submodule update --init --recursive 递归的下载完所有第三方库，根据报错提示以及手动检查，把没有下载的再手动git clone一下
+
+
+
