@@ -7,6 +7,7 @@
 #include <memory>
 #include <vector>
 #include <ATen/ATen.h>
+#include "../utils/utils.hpp"
 
 namespace rs {
     class RS_Model{
@@ -20,6 +21,21 @@ namespace rs {
                 std::cerr << "error loading the model\n";
             }
         }
+
+        std::string rs_handle(const std::string& embedding_str) {
+            std::vector<float> embedding_vector = rs::convert_string_to_vector<float>(embedding_str, ',');
+            std::vector<float> inference_result = this->inference(embedding_vector);
+            std::vector<int> item_arg_sort = rs::argsort<float>(inference_result, true);
+            std::string item_arg_sort_list = rs::convert_verctor_string<int>(item_arg_sort, ',');
+            return item_arg_sort_list;
+        }
+
+        std::vector<float> call_inference(std::vector<float>& input_value) {
+            assert(typeid(input_value) == typeid(std::vector<float>) && input_value.size() == 10);
+
+            return this->inference(input_value);
+        }
+    private:
         std::vector<float> inference(std::vector<float>& input_value) {
             // 将vector转换为tensor
             auto _opts = torch::TensorOptions().dtype(torch::kFloat32);
@@ -30,12 +46,10 @@ namespace rs {
             std::vector<float> v(output.data_ptr<float>(), output.data_ptr<float>() + output.numel());
             return v;
         }
-    private:
         // model
         torch::jit::script::Module _model;
         //std::string _model_path;
         // 用于初始化输入到模型的维度信息
         at::IntArrayRef _input_tensor_shape;
-
     };
 }

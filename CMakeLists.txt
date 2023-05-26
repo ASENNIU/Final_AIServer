@@ -23,7 +23,8 @@ project(Final_AISever C CXX)
 
 include(cmake/common.cmake model/model.hpp)
 
-list(APPEND CMAKE_PREFIX_PATH "/home/leon/.local/libtorch_cpu/libtorch")
+list(APPEND CMAKE_PREFIX_PATH "/home/leon/.local/libtorch_cpu/libtorch;/home/leon/.local/gRPC")
+
 find_package(Torch REQUIRED)
 
 # Proto file

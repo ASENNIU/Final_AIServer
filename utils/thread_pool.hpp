@@ -125,7 +125,7 @@ public:
     {
         // 将参数与执行函数绑定，同时对参数使用完美转发，保证实参的信息
         std::function<decltype(f(args...))()> func = std::bind(std::forward<F>(f), std::forward<Args>(args)...);
-        auto task_ptr = std::make_shared<std::packaged_task<decltype(f(args...)())>>(func);
+        auto task_ptr = std::make_shared<std::packaged_task<decltype(f(args...))()>>(func);
 
         std::function<void()> warpper_func = [task_ptr]() {
             (*task_ptr)();

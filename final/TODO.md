@@ -11,3 +11,12 @@ https://pytorch.org/tutorials/advanced/cpp_export.html
 aTen和vector转换
 
 https://blog.csdn.net/Chris_zhangrx/article/details/119044311
+
+libtorch编译
+
+```
+mkdir -p cmake/build
+cd cmake/build
+cmake -DCMAKE_PREFIX_PATH=/home/leon/.local/libtorch_cpu/libtorch ../../
+```
+
