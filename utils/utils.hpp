@@ -37,6 +37,11 @@ namespace rs{
             lastPos = str.find_first_not_of(delim, pos);
             pos = str.find_first_of(delim, lastPos);
         }
+
+        /***
+         *  C++函数调用及返回的逻辑是在调用处打断点，创建一个临时匿名对象，由函数返回的局部对象为这个临时对象初始化，并用这个临时对象
+         *  赋值调用方（可能有），但根据我的测试以及网上的资料，现代编译器会优化这个过程RVO，所以在这里并未做过多处理
+         */   
         return result_vector;
     }
 
