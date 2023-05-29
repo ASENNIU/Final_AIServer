@@ -125,6 +125,8 @@ private:
                 std::cout << "finish inference: " << item_list << '\n';
                 /***
                  * 模型的推理在主线程进行，结果得会写提交到线程池执行
+                 * 这里其实多线程控制的粒度不够细，模型的推理，结果的转换都在主线程中进行了，这样的原因在readme.md中已经说明原因了
+                 * 由于整个业务流还不够明确细节，所以这里并未做进一步的优化
                  */
                 std::function<void(std::string& response)> write_response = [_this=this](std::string& response) {
                     std::cout << "handle the rpc..." << '\n';
@@ -172,6 +174,11 @@ private:
         // The means to get back to the client.
         ServerAsyncResponseWriter<itemsString> responder_;
 
+        /***
+         *  CallData虽然是ServerImpl的内部类，但并不会继承其拥有的资源，所以这里需要创建model和线程池的对象
+         *  使用智能指针会更加安全
+         * 
+        */
         std::shared_ptr<rs::RS_Model> __model;
         std::shared_ptr<ThreadPool> __thread_pool;
 
@@ -200,6 +207,9 @@ private:
         }
     }
 
+    /***
+     *  这里我写的不好，gRPC的代码使用的谷歌提供demo，他们的private 对象的命名采用的策略是加后置下划线，这些规范应该学习
+     */
     std::unique_ptr<ServerCompletionQueue> cq_;
     RSer::AsyncService service_;
     std::unique_ptr<Server> server_;
