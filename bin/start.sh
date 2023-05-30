@@ -1,0 +1,1 @@
+/Final_AI_Server/Final_AIServer /Final_AI_Server/RS_CO_MODEL.pt
